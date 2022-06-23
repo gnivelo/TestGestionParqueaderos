@@ -1,0 +1,115 @@
+USE [master]
+GO
+
+/****** Object:  Database [GestionParqueadero]    Script Date: 23/6/2022 17:53:56 ******/
+DROP DATABASE [GestionParqueadero]
+GO
+
+/****** Object:  Database [GestionParqueadero]    Script Date: 23/6/2022 17:53:56 ******/
+CREATE DATABASE [GestionParqueadero]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'GestionParqueadero', FILENAME = N'D:\Kruger\Data\GestionParqueadero.mdf' , SIZE = 5120KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'GestionParqueadero_log', FILENAME = N'D:\Kruger\Data\GestionParqueadero_log.ldf' , SIZE = 2048KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+
+ALTER DATABASE [GestionParqueadero] SET COMPATIBILITY_LEVEL = 110
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [GestionParqueadero].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET AUTO_CREATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET RECOVERY FULL 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [GestionParqueadero] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+
+ALTER DATABASE [GestionParqueadero] SET  READ_WRITE 
+GO
+
